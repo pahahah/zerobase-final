@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Zerobase 원우회</title>
+</head>
+<body>
+
+<h1>Zerobase 원우회 로그인</h1>
+<div th:replace="/fragments/layout.html :: fragment-body-menu"></div>
+
+<div th:text="${errorMessage}">
+</div>
+
+<form method="post" action="/member/login">
+
+    <div>
+        <p>아이디</p>
+        <input type="text" name="username" placeholder="아이디" required/>
+    </div>
+    <div>
+        <p>비밀번호</p>
+        <input type="password" name="password" placeholder="비밀번호" required/>
+    </div>
+    <div>
+        <button type="submit"> 로그인 </button>
+    </div>
+
+    <div>
+        <input type="checkbox" name="openphone"/>로그인 상태 유지
+
+    </div>
+
+</form>
+
+<hr/>
+<div>
+    <a href="/member/find-password"> 비밀번호 찾기</a>
+</div>
+
+
+
+</body>
+</html>

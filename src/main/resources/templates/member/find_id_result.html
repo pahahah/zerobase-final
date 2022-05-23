@@ -1,0 +1,19 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>아이디 확인</title>
+</head>
+<body>
+    <h1>아이디 확인</h1>
+    <div th:if="${result eq true}">
+        <span th:text="${userName}"> 회원님의 아이디입니다.</span>
+        <span th:text="${userId}"></span>
+        <button onclick="location.href='http://localhost:8080/member/login'"> 로그인 </button>
+    </div>
+    <div th:if="${result eq false}">
+        <p>아이디를 찾을 수 없습니다.</p>
+        <button onclick="location.href='http://localhost:8080/member/fidn-id'"> 아이디찾기 </button>
+    </div>
+</body>
+</html>
